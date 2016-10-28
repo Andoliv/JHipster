@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySprintstatusLabel" translate="burndownApp.sprintstatus.home.createOrEditLabel">Create or edit a Sprintstatus</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.sprintstatus.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.sprintstatus.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="burndownApp.sprintstatus.statusDate" for="field_statusDate">Status Date</label>
+                <div class="input-group">
+                    <input id="field_statusDate" type="text" class="form-control" name="statusDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.sprintstatus.statusDate" is-open="vm.datePickerOpenStatus.statusDate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('statusDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.statusDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.statusDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="burndownApp.sprintstatus.pointsResolved" for="field_pointsResolved">Points Resolved</label>
+            <input type="number" class="form-control" name="pointsResolved" id="field_pointsResolved"
+                    ng-model="vm.sprintstatus.pointsResolved"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="burndownApp.sprintstatus.pointsRemaining" for="field_pointsRemaining">Points Remaining</label>
+            <input type="number" class="form-control" name="pointsRemaining" id="field_pointsRemaining"
+                    ng-model="vm.sprintstatus.pointsRemaining"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="burndownApp.sprintstatus.issuesResolved" for="field_issuesResolved">Issues Resolved</label>
+            <input type="text" class="form-control" name="issuesResolved" id="field_issuesResolved"
+                    ng-model="vm.sprintstatus.issuesResolved"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="burndownApp.sprintstatus.idSprint" for="field_idSprint">Id Sprint</label>
+            <input type="text" class="form-control" name="idSprint" id="field_idSprint"
+                    ng-model="vm.sprintstatus.idSprint"
+                    required />
+            <div ng-show="editForm.idSprint.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.idSprint.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

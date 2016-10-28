@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="burndownApp.sprintstatus.home.title">Sprintstatuses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="sprintstatus.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="burndownApp.sprintstatus.home.createLabel">
+                        Create new Sprintstatus
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="burndownApp.sprintstatus.statusDate">Status Date</span></th>
+                    <th><span translate="burndownApp.sprintstatus.pointsResolved">Points Resolved</span></th>
+                    <th><span translate="burndownApp.sprintstatus.pointsRemaining">Points Remaining</span></th>
+                    <th><span translate="burndownApp.sprintstatus.issuesResolved">Issues Resolved</span></th>
+                    <th><span translate="burndownApp.sprintstatus.idSprint">Id Sprint</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sprintstatus in vm.sprintstatuses track by sprintstatus.id">
+                    <td><a ui-sref="sprintstatus-detail({id:sprintstatus.id})">{{sprintstatus.id}}</a></td>
+                        <td>{{sprintstatus.statusDate | date:'mediumDate'}}</td>
+                    <td>{{sprintstatus.pointsResolved}}</td>
+                    <td>{{sprintstatus.pointsRemaining}}</td>
+                    <td>{{sprintstatus.issuesResolved}}</td>
+                    <td>{{sprintstatus.idSprint}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="sprintstatus-detail({id:sprintstatus.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="sprintstatus.edit({id:sprintstatus.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="sprintstatus.delete({id:sprintstatus.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

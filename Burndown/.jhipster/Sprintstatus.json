@@ -1,0 +1,35 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "statusDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "pointsResolved",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pointsRemaining",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "issuesResolved",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idSprint",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "sprintstatus",
+    "pagination": "no"
+}

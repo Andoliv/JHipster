@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span translate="burndownApp.sprintstatus.detail.title">Sprintstatus</span> {{vm.sprintstatus.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="burndownApp.sprintstatus.statusDate">Status Date</span></dt>
+        <dd>
+            <span>{{vm.sprintstatus.statusDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="burndownApp.sprintstatus.pointsResolved">Points Resolved</span></dt>
+        <dd>
+            <span>{{vm.sprintstatus.pointsResolved}}</span>
+        </dd>
+        <dt><span translate="burndownApp.sprintstatus.pointsRemaining">Points Remaining</span></dt>
+        <dd>
+            <span>{{vm.sprintstatus.pointsRemaining}}</span>
+        </dd>
+        <dt><span translate="burndownApp.sprintstatus.issuesResolved">Issues Resolved</span></dt>
+        <dd>
+            <span>{{vm.sprintstatus.issuesResolved}}</span>
+        </dd>
+        <dt><span translate="burndownApp.sprintstatus.idSprint">Id Sprint</span></dt>
+        <dd>
+            <span>{{vm.sprintstatus.idSprint}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="sprintstatus-detail.edit({id:vm.sprintstatus.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
