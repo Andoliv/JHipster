@@ -1,0 +1,2 @@
+# JHipster
+JHipster projects
