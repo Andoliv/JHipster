@@ -1,5 +1,5 @@
-import {SpyObject} from './spyobject';
-import {JhiLanguageService} from 'ng-jhipster';
+import { SpyObject } from './spyobject';
+import { JhiLanguageService } from 'ng-jhipster';
 import Spy = jasmine.Spy;
 
 export class MockLanguageService extends SpyObject {

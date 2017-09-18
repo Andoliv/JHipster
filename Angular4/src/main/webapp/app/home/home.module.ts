@@ -1,9 +1,9 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import {Angular4SharedModule} from '../shared';
+import { Angular4SharedModule } from '../shared';
 
-import {HOME_ROUTE, HomeComponent} from './';
+import { HOME_ROUTE, HomeComponent } from './';
 
 @NgModule({
     imports: [

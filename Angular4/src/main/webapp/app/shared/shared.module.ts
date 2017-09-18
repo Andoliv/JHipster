@@ -1,19 +1,19 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import {DatePipe} from '@angular/common';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 import {
-    AccountService,
-    Angular4SharedCommonModule,
     Angular4SharedLibsModule,
-    AuthServerProvider,
+    Angular4SharedCommonModule,
     CSRFService,
-    HasAnyAuthorityDirective,
-    JhiLoginModalComponent,
-    LoginModalService,
-    LoginService,
-    Principal,
+    AuthServerProvider,
+    AccountService,
+    UserService,
     StateStorageService,
-    UserService
+    LoginService,
+    LoginModalService,
+    Principal,
+    HasAnyAuthorityDirective,
+    JhiLoginModalComponent
 } from './';
 
 @NgModule({

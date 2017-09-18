@@ -1,5 +1,5 @@
-import {ActivatedRoute} from '@angular/router';
-import {Observable} from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 export class MockActivatedRoute extends ActivatedRoute {
 

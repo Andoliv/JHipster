@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {SessionStorageService} from 'ng2-webstorage';
+import { Injectable } from '@angular/core';
+import { SessionStorageService } from 'ng2-webstorage';
 
 @Injectable()
 export class StateStorageService {

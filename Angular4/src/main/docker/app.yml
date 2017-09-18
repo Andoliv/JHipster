@@ -4,11 +4,12 @@ services:
         image: angular4
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_DATASOURCE_URL=jdbc:mysql://angular4-mysql:3306/angular4?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SPRING_DATA_MONGODB_URI=mongodb://angular4-mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=Angular4
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
             - 8080:8080
-    angular4-mysql:
+    angular4-mongodb:
         extends:
-            file: mysql.yml
-            service: angular4-mysql
+            file: mongodb.yml
+            service: angular4-mongodb

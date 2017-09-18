@@ -1,5 +1,5 @@
 # Angular4
-This application was generated using JHipster 4.7.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.7.0](https://jhipster.github.io/documentation-archive/v4.7.0).
+This application was generated using JHipster 4.8.2, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.8.2](http://www.jhipster.tech/documentation-archive/v4.8.2).
 
 ## Development
 
@@ -90,6 +90,7 @@ will generate few files:
     create src/main/webapp/app/my-component/my-component.component.ts
     update src/main/webapp/app/app.module.ts
 
+
 ## Building for production
 
 To optimize the Angular4 application for production, run:
@@ -124,18 +125,18 @@ For more information, refer to the [Running tests page][].
 ## Using Docker to simplify development (optional)
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
-For example, to start a mysql database in a docker container, run:
+For example, to start a mongodb database in a docker container, run:
 
-    docker-compose -f src/main/docker/mysql.yml up -d
+    docker-compose -f src/main/docker/mongodb.yml up -d
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/mysql.yml down
+    docker-compose -f src/main/docker/mongodb.yml down
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
-    ./mvnw package -Pprod docker:build
+    ./mvnw package -Pprod dockerfile:build
 
 Then run:
 
@@ -147,14 +148,14 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
-[JHipster Homepage and latest documentation]: https://jhipster.github.io
-[JHipster 4.7.0 archive]: https://jhipster.github.io/documentation-archive/v4.7.0
+[JHipster Homepage and latest documentation]: http://www.jhipster.tech
+[JHipster 4.8.2 archive]: http://www.jhipster.tech/documentation-archive/v4.8.2
 
-[Using JHipster in development]: https://jhipster.github.io/documentation-archive/v4.7.0/development/
-[Using Docker and Docker-Compose]: https://jhipster.github.io/documentation-archive/v4.7.0/docker-compose
-[Using JHipster in production]: https://jhipster.github.io/documentation-archive/v4.7.0/production/
-[Running tests page]: https://jhipster.github.io/documentation-archive/v4.7.0/running-tests/
-[Setting up Continuous Integration]: https://jhipster.github.io/documentation-archive/v4.7.0/setting-up-ci/
+[Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.8.2/development/
+[Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.8.2/docker-compose
+[Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.8.2/production/
+[Running tests page]: http://www.jhipster.tech/documentation-archive/v4.8.2/running-tests/
+[Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.8.2/setting-up-ci/
 
 
 [Node.js]: https://nodejs.org/

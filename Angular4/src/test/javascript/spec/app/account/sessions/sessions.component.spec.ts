@@ -1,11 +1,11 @@
-import {ComponentFixture, fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
-import {Observable} from 'rxjs/Rx';
-import {Angular4TestModule} from '../../../test.module';
-import {Session} from '../../../../../../main/webapp/app/account/sessions/session.model';
-import {SessionsComponent} from '../../../../../../main/webapp/app/account/sessions/sessions.component';
-import {SessionsService} from '../../../../../../main/webapp/app/account/sessions/sessions.service';
-import {MockPrincipal} from '../../../helpers/mock-principal.service';
-import {Principal} from '../../../../../../main/webapp/app/shared/auth/principal.service';
+import { ComponentFixture, TestBed, inject, tick, fakeAsync } from '@angular/core/testing';
+import { Observable } from 'rxjs/Rx';
+import { Angular4TestModule } from '../../../test.module';
+import { Session } from '../../../../../../main/webapp/app/account/sessions/session.model';
+import { SessionsComponent } from '../../../../../../main/webapp/app/account/sessions/sessions.component';
+import { SessionsService } from '../../../../../../main/webapp/app/account/sessions/sessions.service';
+import { MockPrincipal } from '../../../helpers/mock-principal.service';
+import { Principal } from '../../../../../../main/webapp/app/shared/auth/principal.service';
 
 describe('Component Tests', () => {
 

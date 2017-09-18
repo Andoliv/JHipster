@@ -1,29 +1,30 @@
 import './vendor.ts';
 
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {Ng2Webstorage} from 'ng2-webstorage';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { Ng2Webstorage } from 'ng2-webstorage';
 
-import {Angular4SharedModule, UserRouteAccessService} from './shared';
-import {Angular4HomeModule} from './home/home.module';
-import {Angular4AdminModule} from './admin/admin.module';
-import {Angular4AccountModule} from './account/account.module';
-import {Angular4EntityModule} from './entities/entity.module';
+import { Angular4SharedModule, UserRouteAccessService } from './shared';
+import { Angular4HomeModule } from './home/home.module';
+import { Angular4AdminModule } from './admin/admin.module';
+import { Angular4AccountModule } from './account/account.module';
+import { Angular4EntityModule } from './entities/entity.module';
 
-import {customHttpProvider} from './blocks/interceptor/http.provider';
-import {PaginationConfig} from './blocks/config/uib-pagination.config';
+import { customHttpProvider } from './blocks/interceptor/http.provider';
+import { PaginationConfig } from './blocks/config/uib-pagination.config';
+
+// jhipster-needle-angular-add-module-import JHipster will add new module here
+
 import {
-    ActiveMenuDirective,
-    ErrorComponent,
-    FooterComponent,
     JhiMainComponent,
     LayoutRoutingModule,
     NavbarComponent,
+    FooterComponent,
+    ProfileService,
     PageRibbonComponent,
-    ProfileService
+    ActiveMenuDirective,
+    ErrorComponent
 } from './layouts';
-
-// jhipster-needle-angular-add-module-import JHipster will add new module here
 
 @NgModule({
     imports: [

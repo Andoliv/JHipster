@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 
-import {Principal} from '../';
-import {LoginModalService} from '../login/login-modal.service';
-import {StateStorageService} from './state-storage.service';
+import { Principal } from '../';
+import { LoginModalService } from '../login/login-modal.service';
+import { StateStorageService } from './state-storage.service';
 
 @Injectable()
 export class UserRouteAccessService implements CanActivate {
@@ -28,8 +28,15 @@ export class UserRouteAccessService implements CanActivate {
         const principal = this.principal;
         return Promise.resolve(principal.identity().then((account) => {
 
-            if (account && principal.hasAnyAuthorityDirect(authorities)) {
-                return true;
+            if (account) {
+              return principal.hasAnyAuthority(authorities).then(
+                (response) => {
+                  if (response) {
+                    return true;
+                  }
+                  return false;
+                }
+              );
             }
 
             this.stateStorageService.storeUrl(url);

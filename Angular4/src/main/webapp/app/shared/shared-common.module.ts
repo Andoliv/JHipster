@@ -1,7 +1,13 @@
-import {LOCALE_ID, NgModule} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
-import {Angular4SharedLibsModule, FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent, JhiLanguageHelper} from './';
+import {
+    Angular4SharedLibsModule,
+    JhiLanguageHelper,
+    FindLanguageFromKeyPipe,
+    JhiAlertComponent,
+    JhiAlertErrorComponent
+} from './';
 
 @NgModule({
     imports: [

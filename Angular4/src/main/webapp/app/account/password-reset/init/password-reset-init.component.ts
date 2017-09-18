@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, ElementRef, OnInit, Renderer} from '@angular/core';
+import { Component, OnInit, AfterViewInit, Renderer, ElementRef } from '@angular/core';
 
-import {PasswordResetInitService} from './password-reset-init.service';
+import { PasswordResetInitService } from './password-reset-init.service';
 
 @Component({
     selector: 'jhi-password-reset-init',
@@ -35,7 +35,7 @@ export class PasswordResetInitComponent implements OnInit, AfterViewInit {
             this.success = 'OK';
         }, (response) => {
             this.success = null;
-            if (response.status === 400 && response.data === 'email address not registered') {
+            if (response.status === 400 && response._body === 'email address not registered') {
                 this.errorEmailNotExists = 'ERROR';
             } else {
                 this.error = 'ERROR';
